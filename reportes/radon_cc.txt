@@ -1,0 +1,32 @@
+smars/persistence.py
+    F 9:0 connect - A (1)
+    F 17:0 save_order - A (1)
+    F 24:0 find_orders_by_symbol - A (1)
+    F 29:0 load_snapshot - A (1)
+    F 33:0 order_checksum - A (1)
+    F 37:0 audit_login - A (1)
+smars/notifier.py
+    F 11:0 notify_power_peg_disabled - A (2)
+    F 5:0 send_alert - A (1)
+smars/config.py
+    F 14:0 load_flags - A (3)
+    F 25:0 flag_enabled - A (1)
+    F 29:0 get_max_child_orders - A (1)
+smars/order_router.py
+    M 39:4 OrderRouter.route - B (9)
+    M 17:4 OrderRouter.validate - B (8)
+    M 28:4 OrderRouter.validate_rlp - B (8)
+    C 8:0 OrderRouter - A (5)
+    M 9:4 OrderRouter.__init__ - A (2)
+    M 73:4 OrderRouter._route_standard - A (2)
+    M 81:4 OrderRouter.cancel - A (2)
+    M 14:4 OrderRouter._send - A (1)
+smars/legacy_power_peg.py
+    F 17:0 legacy_power_peg_handler - A (4)
+    F 31:0 legacy_power_peg_handler_v2 - A (4)
+    F 44:0 _old_peg_price - A (4)
+    C 8:0 PowerPegOrder - A (2)
+    M 9:4 PowerPegOrder.__init__ - A (1)
+
+24 blocks (classes, functions, methods) analyzed.
+Average complexity: A (2.75)

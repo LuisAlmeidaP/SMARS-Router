@@ -1,0 +1,33 @@
+──────────────────────────────── 🐙 complexipy ─────────────────────────────────
+smars/config.py
+    flag_enabled 0  ✅  PASSED  
+    get_max_child_orders 0  ✅  PASSED  
+    load_flags 2  ✅  PASSED  
+
+smars/legacy_power_peg.py
+    PowerPegOrder::__init__ 0  ✅  PASSED  
+    legacy_power_peg_handler 5  ✅  PASSED  
+    legacy_power_peg_handler_v2 5  ✅  PASSED  
+    _old_peg_price 9  ✅  PASSED  
+
+smars/notifier.py
+    notify_power_peg_disabled 0  ✅  PASSED  
+    send_alert 0  ✅  PASSED  
+
+smars/order_router.py
+    OrderRouter::_send 0  ✅  PASSED  
+    OrderRouter::__init__ 1  ✅  PASSED  
+    OrderRouter::cancel 1  ✅  PASSED  
+    OrderRouter::_route_standard 2  ✅  PASSED  
+    OrderRouter::validate 7  ✅  PASSED  
+    OrderRouter::validate_rlp 7  ✅  PASSED  
+    OrderRouter::route 24  ❌  FAILED  
+
+smars/persistence.py
+    audit_login 0  ✅  PASSED  
+    connect 0  ✅  PASSED  
+    find_orders_by_symbol 0  ✅  PASSED  
+    load_snapshot 0  ✅  PASSED  
+    order_checksum 0  ✅  PASSED  
+    save_order 0  ✅  PASSED  
+────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────

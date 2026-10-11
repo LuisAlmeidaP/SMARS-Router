@@ -1,0 +1,34 @@
+id,categoria,severidad,ocurrencias,archivo,lineas,herramienta,regla,descripcion
+S1,Seguridad,Crítico,2,config.py,"6, 8",Bandit,B105,Credenciales y token escritos directamente en el código
+S2,Seguridad,Crítico,1,order_router.py,83,Bandit,B608,Consulta SQL construida por concatenación (cancel)
+S2,Seguridad,Crítico,2,persistence.py,"18, 25",Bandit,B608,Consultas SQL construidas por concatenación
+S3,Seguridad,Crítico,1,notifier.py,8,Bandit,B602,Comando de shell con shell=True y datos interpolados
+S4,Seguridad,Alto,1,persistence.py,30,Bandit,B301,Deserialización con pickle de datos no confiables
+S5,Seguridad,Medio,1,persistence.py,34,Bandit,B324,Uso de MD5 como checksum
+S7,Seguridad,Bajo,2,legacy_power_peg.py,"22, 34",Bandit,B311,Generador pseudoaleatorio no criptográfico
+S8,Seguridad,Bajo,1,notifier.py,12,Bandit,B101,Validación con assert
+R1,Confiabilidad y rendimiento,Crítico,1,order_router.py,58-69,Complexipy + Coverage + revisión,—,Ruta heredada Power Peg alcanzable por bandera reutilizada; bucle sin contador acumulado
+R2,Confiabilidad y rendimiento,Alto,1,config.py,20,Pylint/Bandit,W0702/B110,Excepción silenciada al cargar banderas
+R2,Confiabilidad y rendimiento,Alto,2,order_router.py,"63, 84",Pylint/Bandit,W0718/W0702/B110,Excepciones silenciadas (alerta y cancelación)
+R3,Confiabilidad y rendimiento,Alto,1,order_router.py,9,Pylint,W0102,Lista mutable como valor por defecto (estado compartido)
+R4,Confiabilidad y rendimiento,Bajo,1,config.py,16,Pylint,W1514,open sin codificación explícita
+M1,Mantenibilidad,Alto,1,order_router.py,39,Complexipy,cognitiva > 15,Complejidad cognitiva de route = 24
+M2,Mantenibilidad,Medio,2,config.py,"8, 14",Vulture,unused,Código sin referencias (BROKER_API_TOKEN, load_flags)
+M2,Mantenibilidad,Medio,2,legacy_power_peg.py,"31, 44",Vulture,unused,Código sin referencias (handler_v2, _old_peg_price)
+M2,Mantenibilidad,Medio,3,order_router.py,"12, 28, 81",Vulture,unused,Código sin referencias (validate_rlp, cancel, errors)
+M2,Mantenibilidad,Medio,4,persistence.py,"24, 29, 33, 37",Vulture,unused,Código sin referencias (4 funciones)
+M3,Mantenibilidad,Medio,1,order_router.py,17-28,jscpd,clone,validate y validate_rlp idénticos
+M3,Mantenibilidad,Medio,1,legacy_power_peg.py,20-38,jscpd,clone,Dos versiones del handler heredado
+M4,Mantenibilidad,Medio,1,order_router.py,39,Pylint,R0911,Demasiadas sentencias return (8/6)
+M5,Mantenibilidad,Bajo,2,order_router.py,"48, 54",Pylint,R1705,else innecesario después de return
+M5,Mantenibilidad,Bajo,1,legacy_power_peg.py,47,Pylint,R1705,else innecesario después de return
+C1,Codificación,Bajo,3,config.py,varias,Pylint,C0116,Funciones sin docstring
+C1,Codificación,Bajo,3,legacy_power_peg.py,varias,Pylint,C0115/C0116,Clase y funciones sin docstring
+C1,Codificación,Bajo,2,notifier.py,varias,Pylint,C0116,Funciones sin docstring
+C1,Codificación,Bajo,5,order_router.py,varias,Pylint,C0115/C0116,Clase y métodos sin docstring
+C1,Codificación,Bajo,6,persistence.py,varias,Pylint,C0116,Funciones sin docstring
+C2,Codificación,Bajo,2,notifier.py,"7, 13",Pylint,C0209,Formato % en lugar de f-string
+C2,Codificación,Bajo,2,persistence.py,"18, 38",Pylint,C0209,Formato % en lugar de f-string
+C3,Codificación,Bajo,1,persistence.py,12,Pylint,C0301,Línea de más de 100 caracteres
+C4,Codificación,Bajo,1,legacy_power_peg.py,8,Pylint,R0903,Clase de datos sin métodos públicos
+T1,Pruebas,Alto,1,order_router.py,—,Coverage.py,cobertura < 80 %,Cobertura total de 50 %; 0 % en la ruta Power Peg

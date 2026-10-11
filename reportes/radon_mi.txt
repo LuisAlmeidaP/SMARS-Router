@@ -1,0 +1,6 @@
+smars/persistence.py - A (59.37)
+smars/notifier.py - A (90.84)
+smars/config.py - A (85.59)
+smars/__init__.py - A (100.00)
+smars/order_router.py - A (45.52)
+smars/legacy_power_peg.py - A (60.63)

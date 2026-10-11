@@ -1,0 +1,2 @@
+H-01 resultado: POWER_PEG | ordenes hijas: 100001 | acciones enviadas: 5043234 | tiempo: 0.15 s | la alerta fallo y no se registro nada
+H-06 lista de b despues de enviar desde a: [('ABC', 1, 1.0)]

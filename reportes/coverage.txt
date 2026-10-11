@@ -1,0 +1,10 @@
+Name                        Stmts   Miss  Cover   Missing
+---------------------------------------------------------
+smars/__init__.py               0      0   100%
+smars/config.py                18      9    50%   15-22, 30
+smars/legacy_power_peg.py      39     31    21%   10-14, 20-28, 32-41, 45-54
+smars/notifier.py               7      4    43%   7-8, 12-13
+smars/order_router.py          68     28    59%   19, 21, 25, 29-37, 52, 58-69, 77, 82-85
+smars/persistence.py           21      5    76%   25-26, 30, 34, 38
+---------------------------------------------------------
+TOTAL                         153     77    50%

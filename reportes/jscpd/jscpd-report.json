@@ -1,0 +1,169 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-11T19:49:18.417Z",
+    "formats": {
+      "python": {
+        "sources": {
+          "smars/persistence.py": {
+            "lines": 38,
+            "tokens": 257,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "smars/order_router.py": {
+            "lines": 85,
+            "tokens": 832,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 22,
+            "duplicatedTokens": 232,
+            "percentage": 25.88,
+            "percentageTokens": 27.88,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "smars/notifier.py": {
+            "lines": 13,
+            "tokens": 91,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "smars/legacy_power_peg.py": {
+            "lines": 54,
+            "tokens": 470,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 196,
+            "percentage": 22.22,
+            "percentageTokens": 41.7,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "smars/config.py": {
+            "lines": 30,
+            "tokens": 180,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 220,
+          "tokens": 1830,
+          "sources": 5,
+          "clones": 2,
+          "duplicatedLines": 17,
+          "duplicatedTokens": 214,
+          "percentage": 7.73,
+          "percentageTokens": 11.69,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 220,
+      "tokens": 1830,
+      "sources": 5,
+      "clones": 2,
+      "duplicatedLines": 17,
+      "duplicatedTokens": 214,
+      "percentage": 7.73,
+      "percentageTokens": 11.69,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "python",
+      "lines": 12,
+      "fragment": "(self, order):\n        if order is None:\n            return False\n        if \"symbol\" not in order or order[\"symbol\"] == \"\":\n            return False\n        if \"qty\" not in order or order[\"qty\"] == 0:\n            return False\n        if \"price\" not in order or order[\"price\"] <= 0:\n            return False\n        return True\n\n    def route",
+      "tokens": 116,
+      "firstFile": {
+        "name": "smars/order_router.py",
+        "start": 28,
+        "end": 39,
+        "startLoc": {
+          "line": 28,
+          "column": 21,
+          "position": 262
+        },
+        "endLoc": {
+          "line": 39,
+          "column": 14,
+          "position": 378
+        }
+      },
+      "secondFile": {
+        "name": "smars/order_router.py",
+        "start": 17,
+        "end": 28,
+        "startLoc": {
+          "line": 17,
+          "column": 17,
+          "position": 145
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 21,
+          "position": 261
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 7,
+      "fragment": "children = 0\n    while order.filled < order.qty:\n        child_qty = random.randint(1, 100)\n        px = market.get(\"ask\", order.price) if order.qty > 0 else market.get(\"bid\", order.price)\n        send(order.symbol, child_qty, px)\n        children += 1\n        time",
+      "tokens": 98,
+      "firstFile": {
+        "name": "smars/legacy_power_peg.py",
+        "start": 32,
+        "end": 38,
+        "startLoc": {
+          "line": 32,
+          "column": 5,
+          "position": 251
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 13,
+          "position": 349
+        }
+      },
+      "secondFile": {
+        "name": "smars/legacy_power_peg.py",
+        "start": 20,
+        "end": 26,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 115
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 11,
+          "position": 213
+        }
+      }
+    }
+  ]
+}
